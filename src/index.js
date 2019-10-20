@@ -1,6 +1,6 @@
 const mapboxgl  =require("mapbox-gl")
 
-mapboxgl.accessToken = "your api token here"
+mapboxgl.accessToken = "pk.eyJ1Ijoid2FuZ2R6aSIsImEiOiJjanI4a3F0dmMwN3B1NDRydnE5N2Fscm84In0.9Tdv4bYU0qFnuzGacVaknQ"
 
 const map = new mapboxgl.Map({
     container: "map",
