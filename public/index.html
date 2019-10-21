@@ -5,20 +5,19 @@
     <title>Trip Planner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="./style.css"></link>
-
-    <script src="./bundle.js" defer></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./style.css">
+    </link>
 </head>
 
 <body>
     <header>
         <h1>TripPlanner</h1>
     </header>
-    <div class="app">
+    <div id="app">
         <div id="map"></div>
         <aside>
-            <div class="panel1" id="options-panel">
+            <div class="panel" id="options-panel">
                 <div>
                     <h2>Hotels</h2>
                     <select id="hotels-choices">
@@ -40,29 +39,30 @@
                     </select>
                     <button id="activities-add" class="options-btn">+</button>
                 </div>
+            </div>
+            <div class="panel" id="itinerary">
+                <div>
+                    <h2>My Hotel</h2>
+                    <ul class="list-group" id="hotels-list">
+
+                    </ul>
                 </div>
-                <div class="panel" id="itinerary">
-                    <div>
-                        <h2>My Hotel</h2>
-                        <ul class="list-group" id="hotels-list">
-                
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>My Restaurants</h2>
-                        <ul class="list-group" id="restaurants-list">
-                
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>My Activities</h2>
-                        <ul class="list-group" id="activities-list">
-                
-                        </ul>
-                    </div>
+                <div>
+                    <h2>My Restaurants</h2>
+                    <ul class="list-group" id="restaurants-list">
+
+                    </ul>
+                </div>
+                <div>
+                    <h2>My Activities</h2>
+                    <ul class="list-group" id="activities-list">
+
+                    </ul>
+                </div>
             </div>
         </aside>
     </div>
+    <script src="./bundle.js"></script>
 </body>
 
 </html>
