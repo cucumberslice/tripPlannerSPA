@@ -1,4 +1,4 @@
-const mapbox = require("mapbox-gl")
+const { Marker } = require("mapbox-gl")
 /// Marker Factory Module
 
 const iconURLs = {
@@ -8,11 +8,14 @@ const iconURLs = {
 };
 
 const buildMarker = function(type, coords) {
+    if (!iconURLs.hasOwnProperty(type)) {
+        type = "activities";
+    }
     const markerDomEl = document.createElement("div")
     markerDomEl.style.width = "32px";
     markerDomEl.style.height = "39px";
     markerDomEl.style.backgroundImage = `url(${iconURLs[type]})`;
-     return new mapbox.Marker(markerDomEl).setLngLat(coords)
+     return new Marker(markerDomEl).setLngLat(coords)
 }
 
 module.exports = buildMarker
